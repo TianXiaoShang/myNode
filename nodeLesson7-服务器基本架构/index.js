@@ -5,7 +5,6 @@ var globalConfig = require('./config');
 var loader = require('./loader');
 var log = require('./log');
 
-console.log(globalConfig, 8);
 // http跟net一样可以创建服务，底层也是调用net的createServer方法
 http.createServer((request, response) => {
     // console.log(request.url);                      ///login.html?a=1&b=2 在http中已经帮我们将url处理好，不需要字符串提取
