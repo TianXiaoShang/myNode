@@ -1,14 +1,14 @@
-window.onload = function () {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open('GET', '/getData', true);
-    xmlHttp.send(null);
-    xmlHttp.onreadystatechange = function () {
-        if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
-            console.log(xmlHttp.responseText, 7);
-            console.log(typeof xmlHttp.responseText);
-        }
-    }
-}
+// window.onload = function () {
+//     var xmlHttp = new XMLHttpRequest();
+//     xmlHttp.open('GET', '/getData', true);
+//     xmlHttp.send(null);
+//     xmlHttp.onreadystatechange = function () {
+//         if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
+//             console.log(xmlHttp.responseText, 7);
+//             console.log(typeof xmlHttp.responseText);
+//         }
+//     }
+// }
 
 // get请求  -->  改post请求
 // function login () {

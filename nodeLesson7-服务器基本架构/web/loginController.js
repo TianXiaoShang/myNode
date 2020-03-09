@@ -54,17 +54,18 @@ function loginForServer(request, response) {
             } else {
                 if (result[0].pwd === password) {
                     // 服务端做重定向，浏览器看到302会帮助做跳转
-                    response.writeHead(302, {'location': '/main.html'});      // response返回数  据
+                    response.writeHead(302, {'location': '/main.html', "Set-Cookie":"id=" + result[0].id});      // response返回数  据
                     response.end();
                     return;
                 } else {
-                    res = "Fail"
+                    response.writeHead(302, {'location': '/error.html'});      // response返回数  据
+                    response.end();
+                    return;
                 }
             }
             response.writeHead(404);      // response返回数  据
             response.write(res);
             response.end();
-
         })
     })
 }
