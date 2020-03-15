@@ -7,9 +7,7 @@ var configs = conf.toString().split('\r\n')
 for (let i = 0; i < configs.length; i++) {
     const el = configs[i];
     var temp = el.split('=');
-    if (temp < 2) {
-        continue;
-    } else {
+    if (temp.length === 2) {
         globalConfig[temp[0]] = temp[1];
     }
 }
